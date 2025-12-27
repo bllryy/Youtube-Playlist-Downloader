@@ -5,13 +5,14 @@ import os
 # TODO make a thingy so that if the video is not avaible in my country then bypass
 
 # make the output dir
+
+output_dir = "YouTube_Downloads"
+
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
 urls = [
-    "https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID_1",
-    "https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID_2",
-    "https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID_3",
+    "https://soundcloud.com/hedrabionics/sets/63-1a",
     ]
 
 ydl_opts = {
@@ -45,9 +46,9 @@ with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([url])
                 print(f"✓ Playlist {i} completed successfully")
 
-                except Exception as e:
-                    print(f"✗ Error downloading playlist {i}: {str(e)}")
-                    continue
+            except Exception as e:
+                print(f"✗ Error downloading playlist {i}: {str(e)}")
+                continue
 
     print(f" Done! Files saved in: {output_dir}")
 
