@@ -6,3 +6,5 @@ Utilizing python yt-dlp to make it easier to download youtube playlists. Essenti
 - the Default Directory name is ```YouTube_Downloads```
 # To Use
 - Edit the array and put the playlists in there.
+# TODO
+- user input for playlist
